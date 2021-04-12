@@ -1,9 +1,20 @@
 .grid {
-height: 90vh;
-margin: 2rem;
+display: flex;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr;
+
+}
+.grid > * {
+background: orange;
+width: 100%;
+}
+.grid > [style^='--aspect-ratio']::before {
+content: "";
+display: inline-block;
+width: 1px;
+height: 0;
+padding-bottom: calc(100% / (var(--aspect-ratio)));
 }
 .cell {
 color: black;
@@ -12,29 +23,70 @@ text-align: center;
 padding: 4rem;
 }
 .cell-1 {
-background: deepskyblue;
+    border: solid black;
+}
+.cell-1:hover {
+background: rgb(238, 237, 237);
+border: solid black;
 }
 .cell-2 {
-background: orangered;
+    border: solid black;
+}
+.cell-2:hover {
+background: rgb(238, 237, 237);
+border: solid black;
 }
 .cell-3 {
-background: royalblue;
+    border: solid black;
+}
+.cell-3:hover {
+background: rgb(238, 237, 237);
+border: solid black;
 }
 .cell-4 {
-background: gold;
+    border: solid black;
+}
+.cell-4:hover {
+background: rgb(238, 237, 237);
+border: solid black;
 }
 .cell-5 {
-background: blueviolet;
+    border: solid black;
+}
+.cell-5:hover {
+background: rgb(238, 237, 237);
+border: solid black;
 }
 .cell-6 {
-background: limegreen;
+    border: solid black;
+}
+.cell-6:hover {
+background: rgb(238, 237, 237);
+border: solid black;
 }
 .cell-7 {
-background: coral;
+    border: solid black;
+}
+.cell-7:hover {
+background: rgb(238, 237, 237);
+border: solid black;
 }
 .cell-8 {
-background: lightseagreen;
+    border: solid black;
 }
-.cell-9 {
-background: maroon;
+.cell-8:hover {
+background: rgb(238, 237, 237);
+border: solid black;
+}
+.cell-0 {
+    border: solid black;
+}
+.cell-0:hover {
+background: rgb(238, 237, 237);
+border: solid black;
+}
+.restart  {
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }
